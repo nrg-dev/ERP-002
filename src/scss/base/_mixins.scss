@@ -1,0 +1,41 @@
+@import "./variables";
+
+// Font-size classes
+@each $fontSize, $values in $font-sizes {
+  .font-#{$fontSize} {
+    // font-size: #{nth($values, 1)}px;
+    font-size: #{$values}px !important;
+  }
+}
+
+@each $side in $sides {
+  @each $space in $spaces {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+@mixin formatPlaceHolder() {
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $login-title-color;
+    opacity: 1; /* Firefox */
+    opacity: 50%;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $login-title-color;
+    opacity: 50%;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $login-title-color;
+    opacity: 50%;
+  }
+}

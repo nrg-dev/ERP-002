@@ -3,3 +3,19 @@
   align-items: center;
   justify-content: center;
 }
+
+.icon-wrapper {
+  display: block;
+  position: relative;
+  clear: both;
+
+  .fas {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+  }
+
+  input:not([type="checkbox"]) {
+    padding-left: 30px !important;
+  }
+}

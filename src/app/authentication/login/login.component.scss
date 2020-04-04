@@ -1,37 +1,54 @@
 @import "base/variables";
 
+:host {
+  color: $text-alternate-color;
+}
+
 header {
   background-color: $header-bg;
   height: 100px;
 }
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 200px;
+  background: $login-form-bg;
+  max-width: calc(100vw - 50px);
+  flex-direction: column;
 
-// .login-page-main-container {
-//   height: 70vh;
+  form {
+    width: 100%;
+    padding: 20px;
 
-//   .login-form {
-//     background-color: $login-form-bg;
-//     padding: 40px 80px;
-//     color: $login-title-color !important;
+    input:not([type="checkbox"]) {
+      font-size: $large;
+      padding: 10px;
+      width: 100%;
+      float: left;
+      display: block;
+      clear: both;
+      margin: 10px 0;
+    }
 
-//     a {
-//       color: $login-title-color !important;
-//     }
+    button[type="submit"] {
+      float: left;
+      color: $white;
+      background: $login-title-color;
+      padding: 10px 20px;
+    }
+    .remember-me {
+      float: right;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
 
-//     .title {
-//       color: $login-title-color;
-//     }
-
-//     button[type="submit"] {
-//       color: $white;
-//       background: $login-title-color;
-//       padding: 8px 40px;
-//       font-family: "RobotoBold";
-//     }
-
-//     .icon-placeholder {
-//       background-color: $login-title-color;
-//       height: 50px;
-//       width: 50px;
-//     }
-//   }
-// }
+      span {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

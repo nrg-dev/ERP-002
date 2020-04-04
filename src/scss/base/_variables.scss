@@ -1,1 +1,39 @@
 @import "./colors";
+
+// font-size variables
+$x-small: 10px;
+$small: 12px;
+$normal: 14px;
+$large: 18px;
+$x-large: 26px;
+
+// font-size for mixin
+$font-sizes: (
+  x-small: 10,
+  small: 12,
+  normal: 14,
+  large: 18,
+  x-large: 26,
+);
+
+// margin and padding
+$spaces: (
+  0,
+  5,
+  10,
+  15,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  100,
+  200,
+  300,
+  400,
+  500
+);
+$sides: (top, bottom, left, right);
