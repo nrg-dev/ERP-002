@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { MatExpansionModule } from "@angular/material/expansion";
+import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, BrowserAnimationsModule],
-  exports: [MatExpansionModule],
+  imports: [CommonModule],
+  exports: [MatExpansionModule, MatTableModule],
 })
 export class MaterialModule {}
