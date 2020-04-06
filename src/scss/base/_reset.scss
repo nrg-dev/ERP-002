@@ -20,6 +20,7 @@ body {
   @include formatPlaceHolder();
 }
 
+.fas,
 button {
   cursor: pointer;
   appearance: none;

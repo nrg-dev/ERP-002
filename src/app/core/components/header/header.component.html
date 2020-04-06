@@ -1,1 +1,23 @@
-<p>header works!</p>
+<header class="flex-center">
+  <h1 hidden>ERP</h1>
+
+  <div class="flex-center">
+    <i class="fas fa-bars"></i>
+    <a [routerLink]="['/employment']">
+      <img
+        src="assets/images/nrg-logo-transparent.png"
+        class="i"
+        alt="app logo"
+      />
+    </a>
+
+    <i class="fas fa-search search-icon" aria-hidden="true"></i>
+    <input class="" type="search" autocomplete="on" placeholder="Search here" />
+  </div>
+  <div class="flex-center">
+    <app-user-avatar></app-user-avatar>
+    <i class="fas fa-cog"></i>
+  </div>
+
+  <!-- <a [routerLink]="['/']"> <i class="fas fa-power-off"></i></a> -->
+</header>

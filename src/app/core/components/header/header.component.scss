@@ -1,0 +1,9 @@
+@import "base/variables";
+
+header {
+  height: 80px;
+  padding: 10px 30px;
+  overflow: hidden;
+  justify-content: space-between;
+  background-color: $header-bg;
+}
