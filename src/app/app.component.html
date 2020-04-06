@@ -3,7 +3,7 @@
 </ng-container>
 <div class="side-bar-slide" [ngClass]="{ in: showSideBar }">
   <app-sidebar *ngIf="!routeData?.loginPage"></app-sidebar>
-  <main>
+  <main class="main">
     <router-outlet></router-outlet>
   </main>
 </div>

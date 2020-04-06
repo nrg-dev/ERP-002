@@ -6,7 +6,7 @@
     animation-duration: 300ms;
     animation-fill-mode: forwards;
   }
-  main {
+  main.main {
     float: left;
     width: 100%;
   }
@@ -18,7 +18,7 @@
       animation-duration: 300ms;
       animation-fill-mode: forwards;
     }
-    main {
+    main.main {
       animation-name: expand;
       animation-duration: 300ms;
       animation-fill-mode: forwards;
