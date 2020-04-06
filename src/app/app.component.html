@@ -1,6 +1,9 @@
 <ng-container *ngIf="!routeData?.loginPage">
   <app-header> </app-header>
-  <app-sidebar></app-sidebar>
 </ng-container>
-
-<router-outlet></router-outlet>
+<div class="side-bar-slide" [ngClass]="{ in: showSideBar }">
+  <app-sidebar *ngIf="!routeData?.loginPage"></app-sidebar>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

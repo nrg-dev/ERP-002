@@ -1,1 +1,45 @@
-<p>sidebar works!</p>
+<aside>
+  <ng-container *ngFor="let menuItem of menuItems">
+    <ng-container *ngIf="!menuItem.children; else menuWithChildren">
+      <a
+        [routerLink]="menuItem.path"
+        routerLinkActive="router-link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="flex-start sidebar-menu-item">
+          <img [src]="menuItem.icon" />
+          <p>
+            {{ menuItem.label }}
+          </p>
+        </div>
+      </a>
+    </ng-container>
+
+    <ng-template #menuWithChildren>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header class="p-0">
+            <div class="flex-start sidebar-menu-item">
+              <img [src]="menuItem.icon" />
+              {{ menuItem.label }}
+            </div>
+          </mat-expansion-panel-header>
+          <ng-container *ngFor="let menuItem of menuItem.children">
+            <a
+              [routerLink]="menuItem.path"
+              routerLinkActive="router-link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <div class="flex-start sidebar-menu-item">
+                <img [src]="menuItem.icon" />
+                <p>
+                  {{ menuItem.label }}
+                </p>
+              </div>
+            </a>
+          </ng-container>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ng-template>
+  </ng-container>
+</aside>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { filter, map, mergeMap } from "rxjs/operators";
+import { Store, select } from "@ngrx/store";
 
 @Component({
   selector: "nrg-app",
@@ -8,8 +9,14 @@ import { filter, map, mergeMap } from "rxjs/operators";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
   routeData: any;
+  showSideBar: boolean;
+
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private store: Store<any>
+  ) {}
 
   ngOnInit() {
     // Get Route data
@@ -28,5 +35,9 @@ export class AppComponent implements OnInit {
       .subscribe((data) => {
         this.routeData = data;
       });
+
+    this.store
+      .select("showSideBar")
+      .subscribe((state) => (this.showSideBar = state));
   }
 }

@@ -1,0 +1,56 @@
+.side-bar-slide {
+  aside {
+    display: none;
+    float: left;
+    animation-name: slide-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+  main {
+    float: left;
+    width: 100%;
+  }
+
+  &.in {
+    aside {
+      display: block;
+      animation-name: slide-in;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+    }
+    main {
+      animation-name: expand;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    display: none;
+    width: 0;
+  }
+  to {
+    display: block;
+    width: 16.6666666667%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    width: 16.6666666667%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes expand {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 83.3333333333%;
+  }
+}

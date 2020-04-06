@@ -2,8 +2,11 @@
   <h1 hidden>ERP</h1>
 
   <div class="flex-center">
-    <i class="fas fa-bars"></i>
-    <a [routerLink]="['/employment']">
+    <i
+      (click)="toggleSideBar()"
+      class="fas fa-bars pl-10 pr-10 pt-10 pb-10 font-x-large"
+    ></i>
+    <a [routerLink]="['/employment']" routerLinkActive="router-link-active">
       <img
         src="assets/images/nrg-logo-transparent.png"
         class="i"

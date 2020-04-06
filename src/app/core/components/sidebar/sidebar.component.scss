@@ -1,0 +1,23 @@
+@import "base/variables";
+
+a {
+  display: block;
+}
+.router-link-active {
+  border-bottom: 3px solid $white;
+}
+
+.sidebar-menu-item {
+  padding: 5px 10px;
+
+  p {
+    display: inline-block;
+  }
+}
+
+aside {
+  img {
+    height: 30px;
+    margin: 0 10px 0 0;
+  }
+}
